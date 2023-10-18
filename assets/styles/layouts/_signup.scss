@@ -1,0 +1,120 @@
+.signUp-container{
+    @media screen and (max-width:930px) {
+       flex-direction: column-reverse;
+       border-radius: 0;
+       width: 100%;
+       height: 100%;
+       box-shadow: none;
+     
+    }
+    background: $white1;
+    border-radius: 36px;
+    width: 928px;
+    height: 641px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.253);
+    
+    .form-content{
+        @media screen and (max-width:930px) {
+          width: 90%;
+          margin-top: 40px;
+         }
+        width: 376px;
+        margin: 0 auto;
+
+        span:first-of-type{
+            display: inline-block;
+            margin: 24px 0 24px;
+        }
+    }
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+            img{
+                margin-right: 16px;
+            }
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    form{
+        @media screen and (max-width:930px) {
+          margin-bottom: 40px;
+        }
+        margin-top: 40px;
+        label{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            height: 18px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            #errorEmail{
+                opacity: 0;
+                color: $color1;
+                transition: 0.4s ease;
+            }
+        }
+        input[type="email"]{
+            border: 1px solid #19182b3a ;
+            font-family: Roboto, sans-serif;
+            color: $color2;
+            margin-bottom: 24px;
+            &::placeholder{
+                color:#19182b4e;
+            }
+        }
+        input[type="submit"]{
+            background: $color2;
+            color: $white1;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover{
+                background: $gradient1;
+            }
+        }
+
+        &.error{
+            input[type="email"]{
+                border: 1px solid $color1 ;
+                background: rgba(255, 0, 0, 0.107);
+                &::placeholder{
+                    color:$color1;
+                }
+            }
+            #errorEmail{
+                opacity: 100%;
+            }
+        }
+    }
+    
+    #imgDesktop{
+        @media screen and (max-width:930px) {
+           display: none;
+         }
+        margin-right: 24px;
+        object-fit: contain;
+        width: 400px;
+        height: 593px;
+        }
+    
+    #imgMobile{
+        @media screen and (max-width:930px) {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            
+          }
+            display: none;
+        }
+        
+    
+}
